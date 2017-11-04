@@ -10,6 +10,8 @@ t,b,f,c = [int(t),int(b),int(f),int(c)]
 
 n = t+1 #numero de nodos
 
+print " "
+
 nodos=[set([]) for _ in xrange(n+1)]
 
 nodos[0].add(n) #agregamos en la primera posicion el numero de nodos
@@ -41,7 +43,7 @@ else:
     pos = 1
     while f != 0:
         m = pos + 2
-        while m <= n:
+        while m < n:
             nodos[pos].add(m)
             m += 1
             f -= 1
@@ -75,7 +77,7 @@ else:
         nodos[n].add(posicion)
         posicion += 1
         c -= 1
-        
+    print n  
     #imprimimos lo anteriormente calculado
     for j in xrange(1,n+1):
       print len(nodos[j]),
